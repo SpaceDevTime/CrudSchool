@@ -10,6 +10,10 @@ namespace Core.Interfaces
     {
         Task<int> Save();
 
-        ITeacherRepository TeacherRepository { get;}
+        ITeacherRepository TeacherRepository { get; }
+
+        IStudentRepository StudentRepository { get; }
+
+        INoteRepository NoteRepository { get; }
     }
 }

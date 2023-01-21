@@ -12,9 +12,15 @@ namespace Infrastructure.UnitOfWork
         {
             _context = context;
             TeacherRepository = new TeacherRepository(_context);
+            StudentRepository = new StudentRepository(_context);
+            NoteRepository = new NoteRepository(_context);
         }
 
         public ITeacherRepository TeacherRepository { get; private set; }
+
+        public IStudentRepository StudentRepository { get; private set; }
+
+        public INoteRepository NoteRepository { get; private set; }
 
         public async Task<int> Save()
         {
